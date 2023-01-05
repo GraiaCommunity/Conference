@@ -1,5 +1,7 @@
 # Graia Community Conference Record
 
-[#1](./%231)
+[#1](./conf-1)
 
-[#2](./%232)
+[#2](./conf-2)
+
+[#3](./conf-3)

@@ -1,0 +1,107 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "name": "graia-example-std",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "authors": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    }
+                }
+            },
+            "examples": [
+                [
+                    {
+                        "name": "BlueGlassBlock",
+                        "email": "blueglassblock@outlook.com"
+                    }
+                ]
+            ]
+        },
+        "version": {
+            "type": "string" // SemVer
+        },
+        "license": {
+            "type": "object" // Follow pyproject
+        },
+        "urls": {
+            "type": "object" // Follow pyproject
+        },
+        "description": {
+            "type": "object" // Follow pyproject
+        },
+        "icon": {
+            "type": "object" // path or url
+        },
+        "classifiers": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "dependencies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "examples": [
+                [
+                    "graiax-text2img-playwright^=0.2.1" // Accept ^?
+                ]
+            ]
+        },
+        // ^^^^^^^^^ PyPI Metadata
+        "standards": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "examples": []
+        },
+        "frameworks": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "examples": [
+                [
+                    "ariadne",
+                    "avilla"
+                ]
+            ]
+        },
+        "config_endpoints": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "examples": [
+                [
+                    "graiax.modules.mc_ping:PingConfig"
+                ]
+            ]
+        },
+        "component_endpoints": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "examples": [
+                [
+                    "graiax.modules.github.poll:PollComponent"
+                ]
+            ]
+        }
+    }
+    // 
+}
